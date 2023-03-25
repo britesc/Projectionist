@@ -4,7 +4,7 @@ from PySide6.QtWidgets import (
 
 from ui_mainwindow import Ui_MainWindow
 
-from classes import firstclass
+# from classes import firstclass
 
 class MainWindow(QMainWindow, Ui_MainWindow):
     def __init__(self, app) -> None:
@@ -12,7 +12,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.setupUi(self)
         self.app = app
         
-        firstclass.FirstClass(self, self.toolBarPrimary, self.tabWidget)
+        # firstclass.FirstClass(self, self.toolBarPrimary, self.tabWidget)
         
         
         
