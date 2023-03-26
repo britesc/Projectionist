@@ -25,13 +25,8 @@ from PySide6.QtWidgets import (
 
 import buttonsGlassRound_rc
 
-
-# from tabs import (
-#     tab1,
-#     tab2
-# )
-
-
+from tabs.tab1setup import Tab1
+ 
 class SetupClass():
     def __init__(self, mainWindow: QMainWindow, tb, tw) -> None:
         super().__init__()
@@ -57,6 +52,9 @@ class SetupClass():
         file_menu.addSeparator()
         file_menu.addAction(action_exit)
         action_exit.triggered.connect(SetupClass.Response_Exit)
+        
+        taba1 = Tab1()
+        tw.addTab(taba1, "Information")
         
         
     def Response_Exit() -> None:

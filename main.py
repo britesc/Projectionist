@@ -21,6 +21,7 @@ def main() -> None:
     try:
         app = QApplication(sys.argv)
         window = MainWindow(app)
+        
         window.show()
     
     except Exception as err:

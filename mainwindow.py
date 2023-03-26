@@ -3,12 +3,6 @@ from PySide6.QtWidgets import (
     QMainWindow
 ) 
 
-from PySide6 import (
-    QtCore,
-    QtCore,
-    QtGui
-)
-
 from ui_mainwindow import Ui_MainWindow
 
 from classes import setupclass
