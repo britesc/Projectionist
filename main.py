@@ -12,6 +12,7 @@ from PySide6.QtWidgets import (
 )    
 from mainwindow import MainWindow   
 
+
 def main() -> None:
     vApplicationName = os.path.splitext(os.path.basename(__file__))[0]
     
