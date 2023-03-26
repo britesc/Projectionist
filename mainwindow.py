@@ -1,5 +1,12 @@
+
 from PySide6.QtWidgets import (
     QMainWindow
+) 
+
+from PySide6 import (
+    QtCore,
+    QtCore,
+    QtGui
 )
 
 from ui_mainwindow import Ui_MainWindow
@@ -11,6 +18,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         super().__init__()
         self.setupUi(self)
         self.app = app
+
         
         setupclass.SetupClass(self, self.toolBarPrimary, self.tabWidgetCentral)
         

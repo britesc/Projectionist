@@ -9,19 +9,20 @@ import qdarktheme
 from PySide6.QtWidgets import (
     QApplication,
     QMainWindow
-)    
+)  
+
 from mainwindow import MainWindow   
 
 
 def main() -> None:
     vApplicationName = os.path.splitext(os.path.basename(__file__))[0]
     
+    
     try:
         app = QApplication(sys.argv)
         window = MainWindow(app)
-
         window.show()
-            
+    
     except Exception as err:
         print(f"Unfortunately {vApplicationName} has encountered an error \
 and is unable to continue.")
