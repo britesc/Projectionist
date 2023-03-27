@@ -1,3 +1,7 @@
 {
-    "activestate.promptRuntimeCreation": false
+    "activestate.promptRuntimeCreation": false,
+    "qtForPython.rcc.options": [
+        "-o",
+        "${resourceDirname}${pathSeparator}${resourceBasenameNoExtension}_rc.py"
+    ]
 }
