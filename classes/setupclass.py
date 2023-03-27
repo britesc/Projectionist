@@ -26,6 +26,7 @@ from PySide6.QtWidgets import (
 import buttonsGlassRound_rc
 
 from tabs.tab1setup import Tab1
+from tabs.tab2setup import Tab2
  
 class SetupClass():
     def __init__(self, mainWindow: QMainWindow, tb, tw) -> None:
@@ -55,6 +56,9 @@ class SetupClass():
         
         taba1 = Tab1()
         tw.addTab(taba1, "Information")
+        
+        taba2 = Tab2()
+        tw.addTab(taba2, "Configuration")        
         
         
     def Response_Exit() -> None:

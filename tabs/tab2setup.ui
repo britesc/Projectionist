@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Tab1</class>
- <widget class="QWidget" name="Tab1">
+ <class>Tab2Setup</class>
+ <widget class="QWidget" name="Tab2Setup">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -48,7 +48,7 @@
           <item>
            <widget class="QLabel" name="labelTextProjectFolder">
             <property name="text">
-             <string>Please select the location of your Project Folder Master</string>
+             <string>Please use the Wizard to locate your Master Project Folder.</string>
             </property>
            </widget>
           </item>
@@ -58,8 +58,11 @@
          <layout class="QVBoxLayout" name="verticalLayoutlineEditDisplayProjectFolder">
           <item>
            <widget class="QLineEdit" name="lineEditDisplayProjectFolder">
+            <property name="readOnly">
+             <bool>true</bool>
+            </property>
             <property name="placeholderText">
-             <string>Project Folder Location</string>
+             <string>Master Project Folder Location</string>
             </property>
            </widget>
           </item>
@@ -68,7 +71,7 @@
         <item>
          <layout class="QVBoxLayout" name="verticalLayoutButtonsProjectFolder">
           <item>
-           <layout class="QHBoxLayout" name="horizontalLayoutButtonsProjectFolder" stretch="97,1,1,1">
+           <layout class="QHBoxLayout" name="horizontalLayoutButtonsProjectFolder" stretch="97,0">
             <item>
              <spacer name="horizontalSpacer">
               <property name="orientation">
@@ -83,65 +86,34 @@
              </spacer>
             </item>
             <item>
-             <widget class="QPushButton" name="pushButtonLocateMasterProjectFolder">
+             <widget class="QToolButton" name="toolButtonWizardProjectFolder">
+              <property name="minimumSize">
+               <size>
+                <width>48</width>
+                <height>48</height>
+               </size>
+              </property>
+              <property name="toolTip">
+               <string>Location Wizard</string>
+              </property>
               <property name="statusTip">
-               <string>Locate Master  Project Folder</string>
+               <string>Project Folder Location Wizard</string>
               </property>
               <property name="text">
-               <string>Locate</string>
+               <string/>
               </property>
               <property name="icon">
-               <iconset resource="../buttonsglassround.qrc">
-                <normaloff>:/resources/buttons/glassround/glassButtonFind.png</normaloff>:/resources/buttons/glassround/glassButtonFind.png</iconset>
+               <iconset resource="../resources/buttons/buttonsGlassRound.qrc">
+                <normaloff>:/glassRound/glassButtonWizard.png</normaloff>:/glassRound/glassButtonWizard.png</iconset>
               </property>
               <property name="iconSize">
                <size>
-                <width>24</width>
-                <height>24</height>
+                <width>48</width>
+                <height>48</height>
                </size>
               </property>
               <property name="shortcut">
-               <string>Ctrl+F</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="pushButtonSaveMasterProjectFolder">
-              <property name="text">
-               <string>Save</string>
-              </property>
-              <property name="icon">
-               <iconset resource="../buttonsglassround.qrc">
-                <normaloff>:/resources/buttons/glassround/glassButtonSave.png</normaloff>:/resources/buttons/glassround/glassButtonSave.png</iconset>
-              </property>
-              <property name="iconSize">
-               <size>
-                <width>24</width>
-                <height>24</height>
-               </size>
-              </property>
-              <property name="shortcut">
-               <string>Ctrl+S</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="pushButtonCancelMasterProjectsFolder">
-              <property name="text">
-               <string>Cancel</string>
-              </property>
-              <property name="icon">
-               <iconset resource="../buttonsglassround.qrc">
-                <normaloff>:/resources/buttons/glassround/glassButtonCancel.png</normaloff>:/resources/buttons/glassround/glassButtonCancel.png</iconset>
-              </property>
-              <property name="iconSize">
-               <size>
-                <width>24</width>
-                <height>24</height>
-               </size>
-              </property>
-              <property name="shortcut">
-               <string>Ctrl+Z</string>
+               <string>Ctrl+Alt+1</string>
               </property>
              </widget>
             </item>
@@ -185,54 +157,9 @@
     </layout>
    </item>
   </layout>
-  <action name="actionLocateProjectFolder">
-   <property name="icon">
-    <iconset resource="../buttonsglassround.qrc">
-     <normaloff>:/resources/buttons/glassround/glassButtonFind.png</normaloff>:/resources/buttons/glassround/glassButtonFind.png</iconset>
-   </property>
-   <property name="text">
-    <string>Locate</string>
-   </property>
-   <property name="toolTip">
-    <string>Locate Project Master Folder</string>
-   </property>
-   <property name="shortcut">
-    <string>Ctrl+F</string>
-   </property>
-  </action>
-  <action name="actionSaveProjectFolder">
-   <property name="icon">
-    <iconset resource="../buttonsglassround.qrc">
-     <normaloff>:/resources/buttons/glassround/glassButtonSave.png</normaloff>:/resources/buttons/glassround/glassButtonSave.png</iconset>
-   </property>
-   <property name="text">
-    <string>Save</string>
-   </property>
-   <property name="toolTip">
-    <string>Save Master Project Folder</string>
-   </property>
-   <property name="shortcut">
-    <string>Ctrl+S</string>
-   </property>
-  </action>
-  <action name="actionCancelProjectFolder">
-   <property name="icon">
-    <iconset resource="../buttonsglassround.qrc">
-     <normaloff>:/resources/buttons/glassround/glassButtonCancel.png</normaloff>:/resources/buttons/glassround/glassButtonCancel.png</iconset>
-   </property>
-   <property name="text">
-    <string>Cancel</string>
-   </property>
-   <property name="toolTip">
-    <string>Cancel Amendments to Master Project Folder</string>
-   </property>
-   <property name="shortcut">
-    <string>Ctrl+Z</string>
-   </property>
-  </action>
  </widget>
  <resources>
-  <include location="../buttonsglassround.qrc"/>
+  <include location="../resources/buttons/buttonsGlassRound.qrc"/>
  </resources>
  <connections/>
 </ui>
