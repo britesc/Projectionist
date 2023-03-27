@@ -12,6 +12,7 @@ from PySide6.QtWidgets import (
 )  
 
 from mainwindow import MainWindow   
+from classes import _j2_settings
 
 
 def main() -> None:
@@ -20,9 +21,12 @@ def main() -> None:
     
     try:
         app = QApplication(sys.argv)
+        
         window = MainWindow(app)
         
         window.show()
+        vJ2S =_j2_settings.J2_Settings("J2Casa", "Projectionist")
+        vJ2S.setDefaults()
     
     except Exception as err:
         print(f"Unfortunately {vApplicationName} has encountered an error \
