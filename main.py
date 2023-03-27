@@ -3,8 +3,8 @@
 
 import os
 import sys
-import traceback
 import qdarktheme
+import traceback
 
 from PySide6.QtWidgets import (
     QApplication,
@@ -21,9 +21,9 @@ def main() -> None:
     
     try:
         app = QApplication(sys.argv)
-        
+        qdarktheme.setup_theme()
         window = MainWindow(app)
-        
+        qdarktheme.__dict__
         window.show()
         vJ2S =_j2_settings.J2_Settings("J2Casa", "Projectionist")
         vJ2S.setDefaults()
