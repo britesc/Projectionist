@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>476</width>
-    <height>351</height>
+    <height>352</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -42,13 +42,25 @@
        <property name="title">
         <string>Project Folder Wizard</string>
        </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
        <layout class="QVBoxLayout" name="verticalLayout_4">
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
         <item>
          <layout class="QVBoxLayout" name="verticalLayoutlabelTextProjectFolder">
           <item>
            <widget class="QLabel" name="labelTextProjectFolder">
             <property name="text">
              <string>Please use the Wizard to locate your Master Project Folder.</string>
+            </property>
+            <property name="margin">
+             <number>1</number>
             </property>
            </widget>
           </item>
@@ -73,7 +85,7 @@
           <item>
            <layout class="QHBoxLayout" name="horizontalLayoutButtonsProjectFolder" stretch="97,0">
             <item>
-             <spacer name="horizontalSpacer">
+             <spacer name="horizontalSpacerProjectFolder">
               <property name="orientation">
                <enum>Qt::Horizontal</enum>
               </property>
@@ -167,6 +179,150 @@
        <property name="title">
         <string>Applications Locations Wizard</string>
        </property>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayoutApplicatiosWizardText">
+          <item>
+           <widget class="QLabel" name="labelTextApplicationsWizard">
+            <property name="text">
+             <string>Please locate applications using the Wizard.</string>
+            </property>
+            <property name="wordWrap">
+             <bool>true</bool>
+            </property>
+            <property name="margin">
+             <number>1</number>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayoutApplicatiosWizardDetails">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout" stretch="0,0,0,0,0,0,0">
+            <item>
+             <widget class="QLabel" name="labelTextLastRun">
+              <property name="text">
+               <string>Last Run:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="labelTextLastRunWhen">
+              <property name="text">
+               <string>Never</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="labelTextVersion">
+              <property name="text">
+               <string>Version:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="labelTextVersionYAML">
+              <property name="text">
+               <string>0.0.0</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="labelTextInstalled">
+              <property name="text">
+               <string>Installed:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="labelTextInstallledQuantity">
+              <property name="text">
+               <string>None</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacerConfigureWizard">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayoutButtonsApplications">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayoutButtonsApplications">
+            <item>
+             <spacer name="horizontalSpacerApplications">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButtonWizardApplications">
+              <property name="minimumSize">
+               <size>
+                <width>48</width>
+                <height>48</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>48</width>
+                <height>48</height>
+               </size>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset resource="../resources/buttons/buttonsGlassRound.qrc">
+                <normaloff>:/glassRound/glassButtonWizard.png</normaloff>:/glassRound/glassButtonWizard.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>48</width>
+                <height>48</height>
+               </size>
+              </property>
+              <property name="flat">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+       </layout>
       </widget>
      </item>
     </layout>

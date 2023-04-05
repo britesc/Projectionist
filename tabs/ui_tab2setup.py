@@ -21,10 +21,10 @@ from PySide6.QtWidgets import (QApplication, QGridLayout, QGroupBox, QHBoxLayout
 import buttonsGlassRound_rc
 
 class Ui_Tab2Setup(object):
-    def setupUi(self, Tab2Setup):
+    def setupUi(self, Tab2Setup) -> None:
         if not Tab2Setup.objectName():
             Tab2Setup.setObjectName(u"Tab2Setup")
-        Tab2Setup.resize(476, 351)
+        Tab2Setup.resize(476, 352)
         sizePolicy = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(1)
@@ -41,12 +41,15 @@ class Ui_Tab2Setup(object):
         sizePolicy1.setVerticalStretch(5)
         sizePolicy1.setHeightForWidth(self.groupBoxProjectFolder.sizePolicy().hasHeightForWidth())
         self.groupBoxProjectFolder.setSizePolicy(sizePolicy1)
+        self.groupBoxProjectFolder.setFlat(False)
         self.verticalLayout_4 = QVBoxLayout(self.groupBoxProjectFolder)
         self.verticalLayout_4.setObjectName(u"verticalLayout_4")
+        self.verticalLayout_4.setContentsMargins(-1, 0, -1, 0)
         self.verticalLayoutlabelTextProjectFolder = QVBoxLayout()
         self.verticalLayoutlabelTextProjectFolder.setObjectName(u"verticalLayoutlabelTextProjectFolder")
         self.labelTextProjectFolder = QLabel(self.groupBoxProjectFolder)
         self.labelTextProjectFolder.setObjectName(u"labelTextProjectFolder")
+        self.labelTextProjectFolder.setMargin(1)
 
         self.verticalLayoutlabelTextProjectFolder.addWidget(self.labelTextProjectFolder)
 
@@ -68,9 +71,9 @@ class Ui_Tab2Setup(object):
         self.verticalLayoutButtonsProjectFolder.setObjectName(u"verticalLayoutButtonsProjectFolder")
         self.horizontalLayoutButtonsProjectFolder = QHBoxLayout()
         self.horizontalLayoutButtonsProjectFolder.setObjectName(u"horizontalLayoutButtonsProjectFolder")
-        self.horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+        self.horizontalSpacerProjectFolder = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
-        self.horizontalLayoutButtonsProjectFolder.addItem(self.horizontalSpacer)
+        self.horizontalLayoutButtonsProjectFolder.addItem(self.horizontalSpacerProjectFolder)
 
         self.pushButtonWizardProjectFolder = QPushButton(self.groupBoxProjectFolder)
         self.pushButtonWizardProjectFolder.setObjectName(u"pushButtonWizardProjectFolder")
@@ -114,6 +117,90 @@ class Ui_Tab2Setup(object):
         self.groupBoxLocateApps.setObjectName(u"groupBoxLocateApps")
         sizePolicy1.setHeightForWidth(self.groupBoxLocateApps.sizePolicy().hasHeightForWidth())
         self.groupBoxLocateApps.setSizePolicy(sizePolicy1)
+        self.verticalLayout_2 = QVBoxLayout(self.groupBoxLocateApps)
+        self.verticalLayout_2.setObjectName(u"verticalLayout_2")
+        self.verticalLayout_2.setContentsMargins(-1, 0, -1, 0)
+        self.verticalLayoutApplicatiosWizardText = QVBoxLayout()
+        self.verticalLayoutApplicatiosWizardText.setObjectName(u"verticalLayoutApplicatiosWizardText")
+        self.labelTextApplicationsWizard = QLabel(self.groupBoxLocateApps)
+        self.labelTextApplicationsWizard.setObjectName(u"labelTextApplicationsWizard")
+        self.labelTextApplicationsWizard.setWordWrap(True)
+        self.labelTextApplicationsWizard.setMargin(1)
+
+        self.verticalLayoutApplicatiosWizardText.addWidget(self.labelTextApplicationsWizard)
+
+
+        self.verticalLayout_2.addLayout(self.verticalLayoutApplicatiosWizardText)
+
+        self.verticalLayoutApplicatiosWizardDetails = QVBoxLayout()
+        self.verticalLayoutApplicatiosWizardDetails.setObjectName(u"verticalLayoutApplicatiosWizardDetails")
+        self.horizontalLayout = QHBoxLayout()
+        self.horizontalLayout.setObjectName(u"horizontalLayout")
+        self.labelTextLastRun = QLabel(self.groupBoxLocateApps)
+        self.labelTextLastRun.setObjectName(u"labelTextLastRun")
+
+        self.horizontalLayout.addWidget(self.labelTextLastRun)
+
+        self.labelTextLastRunWhen = QLabel(self.groupBoxLocateApps)
+        self.labelTextLastRunWhen.setObjectName(u"labelTextLastRunWhen")
+        self.labelTextLastRunWhen.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+
+        self.horizontalLayout.addWidget(self.labelTextLastRunWhen)
+
+        self.labelTextVersion = QLabel(self.groupBoxLocateApps)
+        self.labelTextVersion.setObjectName(u"labelTextVersion")
+
+        self.horizontalLayout.addWidget(self.labelTextVersion)
+
+        self.labelTextVersionYAML = QLabel(self.groupBoxLocateApps)
+        self.labelTextVersionYAML.setObjectName(u"labelTextVersionYAML")
+
+        self.horizontalLayout.addWidget(self.labelTextVersionYAML)
+
+        self.labelTextInstalled = QLabel(self.groupBoxLocateApps)
+        self.labelTextInstalled.setObjectName(u"labelTextInstalled")
+
+        self.horizontalLayout.addWidget(self.labelTextInstalled)
+
+        self.labelTextInstallledQuantity = QLabel(self.groupBoxLocateApps)
+        self.labelTextInstallledQuantity.setObjectName(u"labelTextInstallledQuantity")
+
+        self.horizontalLayout.addWidget(self.labelTextInstallledQuantity)
+
+        self.horizontalSpacerConfigureWizard = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.horizontalLayout.addItem(self.horizontalSpacerConfigureWizard)
+
+
+        self.verticalLayoutApplicatiosWizardDetails.addLayout(self.horizontalLayout)
+
+
+        self.verticalLayout_2.addLayout(self.verticalLayoutApplicatiosWizardDetails)
+
+        self.verticalLayoutButtonsApplications = QVBoxLayout()
+        self.verticalLayoutButtonsApplications.setObjectName(u"verticalLayoutButtonsApplications")
+        self.horizontalLayoutButtonsApplications = QHBoxLayout()
+        self.horizontalLayoutButtonsApplications.setObjectName(u"horizontalLayoutButtonsApplications")
+        self.horizontalSpacerApplications = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.horizontalLayoutButtonsApplications.addItem(self.horizontalSpacerApplications)
+
+        self.pushButtonWizardApplications = QPushButton(self.groupBoxLocateApps)
+        self.pushButtonWizardApplications.setObjectName(u"pushButtonWizardApplications")
+        self.pushButtonWizardApplications.setMinimumSize(QSize(48, 48))
+        self.pushButtonWizardApplications.setMaximumSize(QSize(48, 48))
+        self.pushButtonWizardApplications.setIcon(icon)
+        self.pushButtonWizardApplications.setIconSize(QSize(48, 48))
+        self.pushButtonWizardApplications.setFlat(True)
+
+        self.horizontalLayoutButtonsApplications.addWidget(self.pushButtonWizardApplications)
+
+
+        self.verticalLayoutButtonsApplications.addLayout(self.horizontalLayoutButtonsApplications)
+
+
+        self.verticalLayout_2.addLayout(self.verticalLayoutButtonsApplications)
+
 
         self.gridLayoutConfigTab.addWidget(self.groupBoxLocateApps, 2, 0, 1, 1)
 
@@ -126,7 +213,7 @@ class Ui_Tab2Setup(object):
         QMetaObject.connectSlotsByName(Tab2Setup)
     # setupUi
 
-    def retranslateUi(self, Tab2Setup):
+    def retranslateUi(self, Tab2Setup) -> None:
         Tab2Setup.setWindowTitle(QCoreApplication.translate("Tab2Setup", u"Tab", None))
 #if QT_CONFIG(tooltip)
         Tab2Setup.setToolTip(QCoreApplication.translate("Tab2Setup", u"Tab Tool Tip", None))
@@ -153,5 +240,13 @@ class Ui_Tab2Setup(object):
         self.labelConfigTitle.setText(QCoreApplication.translate("Tab2Setup", u"<html><head/><body><h1 style=\" margin-top:18px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:xx-large; font-weight:700;\">Configuration</span></h1></body></html>", None))
         self.labelConfigCopyright.setText(QCoreApplication.translate("Tab2Setup", u"<html><head/><body><p align=\"center\"><span style=\" font-size:small; font-weight:700;\">Copyright J2Casa 2023. All Rights Reserved</span></p></body></html>", None))
         self.groupBoxLocateApps.setTitle(QCoreApplication.translate("Tab2Setup", u"Applications Locations Wizard", None))
+        self.labelTextApplicationsWizard.setText(QCoreApplication.translate("Tab2Setup", u"Please locate applications using the Wizard.", None))
+        self.labelTextLastRun.setText(QCoreApplication.translate("Tab2Setup", u"Last Run:", None))
+        self.labelTextLastRunWhen.setText(QCoreApplication.translate("Tab2Setup", u"Never", None))
+        self.labelTextVersion.setText(QCoreApplication.translate("Tab2Setup", u"Version:", None))
+        self.labelTextVersionYAML.setText(QCoreApplication.translate("Tab2Setup", u"0.0.0", None))
+        self.labelTextInstalled.setText(QCoreApplication.translate("Tab2Setup", u"Installed:", None))
+        self.labelTextInstallledQuantity.setText(QCoreApplication.translate("Tab2Setup", u"None", None))
+        self.pushButtonWizardApplications.setText("")
     # retranslateUi
 

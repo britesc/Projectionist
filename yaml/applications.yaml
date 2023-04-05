@@ -1,0 +1,27 @@
+# YAML Code to Load Applications Needed by Projectionist
+# This is the header information for this YAML Document
+---
+applications:                 # Header Information
+  - date: '20230401'              # Date of creation of code list
+    version: '1.0.0'              # Version of this code list
+    quantity: '35'                # Number of app in list
+...
+# This YAML Document is for apt --list installed
+---
+apps:                         # List of Apps
+  - AppDisplay: Awk                 # Awk
+    AppReal: mawk                   # Physical Name for invocation
+    AppAlias: awk                   # Standard Alias
+    RegexStart: ",now "             # The First Character of the version number within the string
+    RegexEnd: 10  
+
+
+...
+---
+# This YAML Document is for snap list
+...
+---
+# This YAML Document is for user specific installs
+# detailing who to achieve installation information
+# or manually given
+

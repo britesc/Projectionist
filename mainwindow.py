@@ -23,21 +23,21 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         vPFApps = vJ2S.getSetting("Applications", False)
 
         
-        if not vPFLocation:
-            print("False - vPFLocation Not Set")
-        else:
-            print(vPFLocation)    
+        # if not vPFLocation:
+        #     print("False - vPFLocation Not Set")
+        # else:
+        #     print(vPFLocation)    
 
-        if not vPFApps:
-            print("False - vPFApps Not Set")
-        else:
-            print(vPFApps)    
+        # if not vPFApps:
+        #     print("False - vPFApps Not Set")
+        # else:
+        #     print(vPFApps)    
 
         if not vPFLocation or not vPFApps:
-            print("False - Only One or Neither of them set")
+            # print("False - Only One or Neither of them set")
             setupclass.SetupClass(self, self.toolBarPrimary, self.tabWidgetCentral)
         else:
-            print("True - Both of them set")
+            # print("True - Both of them set")
             setupclass.SetupClass(self, self.toolBarPrimary, self.tabWidgetCentral)
         
         

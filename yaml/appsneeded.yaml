@@ -1,0 +1,247 @@
+# YAML Code to Load Apps Needed by Projectionist
+---
+applications:                 # Header Information
+  - date: '20230401'              # Date of creation of code list
+    version: '1.0.0'              # Version of this code list
+    quantity: '35'                # Number of app in list
+apps:                             # List of Apps
+  - AppAlias: Awk             # Awk
+    AppReal: awk                  # Physical Name for invocation
+    AppVerGet: '-W version'       # Used with the Physical Name to retrieve the version string
+    RegexStart: 5                 # The First Character of the version number within the string
+    RegexEnd: 10                  # The Last Character of the version number within the string
+    Type: Tool
+  - AppAlias: Bash            # Bash
+    AppReal: bash
+    AppVerGet: '--version'
+    RegexStart: 17
+    RegexEnd: 23
+    Type: Tool
+  - AppAlias: CMake           # CMake
+    AppReal: cmake
+    AppVerGet: '--version'
+    RegexStart: 14
+    RegexEnd: 20
+    Type: Tool
+  - AppAlias: Dia             # Dia
+    AppReal: dia
+    AppVerGet: '-v'
+    RegexStart: 12
+    RegexEnd: 18
+    Type: Tool
+  - AppAlias: Dot             # Dot
+    AppReal: dot
+    AppVerGet: '-V'
+    RegexStart: 22
+    RegexEnd: 29
+    Type: Tool
+  - AppAlias: Doxygen         # Doxygen
+    AppReal: doxygen
+    AppVerGet: '--version'
+    RegexStart: 0
+    RegexEnd: 5
+    Type: Tool
+  - AppAlias: GDB             # GDB
+    AppReal: gdb
+    AppVerGet: '--version'
+    RegexStart: 31
+    RegexEnd: 35
+    Type: Tool
+  - AppAlias: Git
+    AppReal: git              # Git
+    AppVerGet: '-v'
+    RegexStart: 12
+    RegexEnd: 20
+    Type: Tool
+  - AppAlias: GMake           # GMake 
+    AppReal: gmake
+    AppVerGet: '--version'
+    RegexStart: 8
+    RegexEnd: 12
+    Type: Tool
+  - AppAlias: Jq              # Jq
+    AppReal: jq
+    AppVerGet: '--version'
+    RegexStart: 3
+    RegexEnd: 6
+    Type: Tool
+  - AppAlias: Ninja           # Ninja
+    AppReal: ninja
+    AppVerGet: '--version'
+    RegexStart: 0
+    RegexEnd: 6
+    Type: Tool
+  - AppAlias: Pip3            # Pip3
+    AppReal: pip3
+    AppVerGet: '--version'
+    RegexStart: 4
+    RegexEnd: 10
+    Type: Tool
+  - AppAlias: Python3         # Python
+    AppReal: python3
+    AppVerGet: '--version'
+    RegexStart: 7
+    RegexEnd: 13
+    Type: Tool
+  - AppAlias: Qt Designer     # Qt Designer
+    AppReal: qtdesignstudio
+    AppVerGet: '--version'
+    RegexStart: 35
+    RegexEnd: 41
+    Type: Application
+  - AppAlias: Qt Creator      # Qt Creator
+    AppReal: qtcreator
+    AppVerGet: '--version'
+    RegexStart: 11
+    RegexEnd: 16
+    Type: Application
+  - AppAlias: Qt              # Qt Version from within Qt Design Studio Version String
+    AppReal: qtdesignstudio
+    AppVerGet: '--version'
+    RegexStart: 17
+    RegexEnd: 23
+    Type: Tool
+  - AppAlias: Sed             # Sed
+    AppReal: sed
+    AppVerGet: '--version'
+    RegexStart: 23
+    RegexEnd: 26
+    Type: Tool
+  - AppAlias: VSCode          # VS Code
+    AppReal: code
+    AppVerGet: '--version'
+    RegexStart: 0
+    RegexEnd: 6
+    Type: Application
+  - AppAlias: Whoami          # Whoami
+    AppReal: whoami
+    AppVerGet: '--version'
+    RegexStart: 23
+    RegexEnd: 27
+    Type: Tool
+  - AppAlias: Whereis         # Whereis
+    AppReal: whereis
+    AppVerGet: '-V'
+    RegexStart: 23
+    RegexEnd: 27
+    Type: Tool
+  - AppAlias: Find             # Find
+    AppReal: find
+    AppVerGet: '--version'
+    RegexStart: 21
+    RegexEnd: 25
+    Type: Tool
+  - AppAlias: PyCharm          # PyCharm
+    AppReal: pycharm
+    AppVerGet: '--version'
+    RegexStart: 123
+    RegexEnd: 128
+    Type: Application
+- AppAlias: PhpStorm          # PhpStorm
+    AppReal: phphelp
+    AppVerGet: 'V'
+    RegexStart: 23
+    RegexEnd: 27
+    Type: Application
+- AppAlias: UltraEdit         # UltraEdit
+    AppReal: whereis
+    AppVerGet: 'V'
+    RegexStart: 23
+    RegexEnd: 27
+    Type: Application
+- AppAlias: UltraCompare      # UltraCompare
+    AppReal: whereis
+    AppVerGet: 'V'
+    RegexStart: 23
+    RegexEnd: 27
+    Type: Application
+- AppAlias: Krita             # Krita
+    AppReal: whereis
+    AppVerGet: 'V'
+    RegexStart: 23
+    RegexEnd: 27
+    Type: Application
+- AppAlias: Gimp              # Gimp
+    AppReal: whereis
+    AppVerGet: 'V'
+    RegexStart: 23
+    RegexEnd: 27
+    Type: Application
+- AppAlias: Powershell        # Powershell
+    AppReal: whereis
+    AppVerGet: 'V'
+    RegexStart: 23
+    RegexEnd: 27
+    Type: Tool
+- AppAlias: Sudo              # Sudo
+    AppReal: whereis
+    AppVerGet: 'V'
+    RegexStart: 23
+    RegexEnd: 27
+    Type: Tool
+- AppAlias: List              # List
+    AppReal: whereis
+    AppVerGet: 'V'
+    RegexStart: 23
+    RegexEnd: 27
+    Type: Tool
+- AppAlias: Copy              # Copy
+    AppReal: whereis
+    AppVerGet: 'V'
+    RegexStart: 23
+    RegexEnd: 27
+    Type: Tool
+- AppAlias: Remove            # Remove
+    AppReal: whereis
+    AppVerGet: 'V'
+    RegexStart: 23
+    RegexEnd: 27
+    Type: Tool
+- AppAlias: Move              # Move
+    AppReal: whereis
+    AppVerGet: 'V'
+    RegexStart: 23
+    RegexEnd: 27
+    Type: Tool
+- AppAlias: Make Directory    # Make Directory
+    AppReal: whereis
+    AppVerGet: 'V'
+    RegexStart: 23
+    RegexEnd: 27
+    Type: Tool
+- AppAlias: Disk Free         # Disk Free
+    AppReal: df
+    AppVerGet: 'V'
+    RegexStart: 23
+    RegexEnd: 27
+    Type: Tool
+- AppAlias: Disk Usage        # Disk Usage
+    AppReal: du
+    AppVerGet: 'V'
+    RegexStart: 23
+    RegexEnd: 27
+    Type: Tool
+- AppAlias: Cat               # Cat
+    AppReal: cat
+    AppVerGet: 'V'
+    RegexStart: 23
+    RegexEnd: 27
+    Type: Tool
+- AppAlias: Grep              # Grep
+    AppReal: grep
+    AppVerGet: 'V'
+    RegexStart: 23
+    RegexEnd: 27
+    Type: Tool
+- AppAlias: Git Hub           # Git Hub
+    AppReal: gh
+    AppVerGet: 'V'
+    RegexStart: 23
+    RegexEnd: 27
+    Type: Tool
+- AppAlias: Arduino IDE       # Arduino IDE
+    AppReal: whereis
+    AppVerGet: 'V'
+    RegexStart: 23
+    RegexEnd: 27
+    Type: Application

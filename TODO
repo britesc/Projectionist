@@ -1,0 +1,21 @@
+Projectionst
+
+DONE 1.  Splash
+    1.1 Update Splash Class and Incorporate
+    1.2 Update Settings to Allow or Disable Splash Screen
+
+2.  Theme
+    2.1 Update Theme Class and Incorporate
+    2,2 Menu Settings
+    2.3 Button Wizard on Toolbar
+
+3.  Git
+    3.1 Tab to checking / updating global config or local config of project (further on)
+    3.2 Same tab to check GitHub config details
+    3.3 GitHub Personal Access Token for Projectionist = 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
+
+4.  About Dialog
+    4.1 Install menu options and trigger dialog
+
+5.  Qt About Dialog
+    5.1 Install menu options and trigger dialog

@@ -11,6 +11,10 @@ from PySide6.QtWidgets import (
     QMainWindow
 )  
 
+from classes._j2_settings import J2_Settings
+from classes._j2_splash import J2_Splash
+
+
 from mainwindow import MainWindow   
 
 
@@ -20,10 +24,18 @@ def main() -> None:
     
     try:
         app = QApplication(sys.argv)
+        vJ2S = J2_Settings("J2Casa", "Projectionist")
+        vJ2S.setDefaults()
+        vSplash = vJ2S.getSetting("Window/Splash", "")
+        if vSplash != "False":
+            splash = J2_Splash(app)
+            splash.show(10)
         qdarktheme.setup_theme()
         window = MainWindow(app)
         qdarktheme.__dict__
         window.show()
+        if vSplash != "False":
+            splash.hide(window)
 
     
     except Exception as err:
