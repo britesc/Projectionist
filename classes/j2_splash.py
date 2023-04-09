@@ -3,7 +3,7 @@
 
 from PySide6.QtWidgets import QSplashScreen
 from PySide6.QtGui import QPixmap
-from classes._j2_utilities import J2_Utilities
+from classes.j2_utilities import J2_Utilities
 
 
 class J2_Splash:

@@ -15,7 +15,7 @@ from PySide6 import (
 from PySide6.QtGui import QActionEvent
 from tabs.ui_tab2setup import Ui_Tab2Setup
 
-from classes._j2_settings import J2_Settings
+from classes.j2_settings import J2_Settings
 from wizards.appwizard import AppWizard
 
 class Tab2(QWidget, Ui_Tab2Setup):
