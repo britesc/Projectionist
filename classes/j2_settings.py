@@ -13,7 +13,7 @@ class J2_Settings:
         self.AppName = QCoreApplication.applicationName()
         self.Version = QCoreApplication.applicationVersion()
         self.Domain  = QCoreApplication.organizationDomain()
-        self.ClassVersion = "1.1.0"
+        self.ClassVersion = "1.2.0"
         self.jSettings = QSettings()
 
         # print(f"organizationName {self.OrgName}")
@@ -37,16 +37,13 @@ class J2_Settings:
 
     def setDefaults(self) -> None:
         """ Set the defaults for settings """
-        vTemp1 = self.jSettings.value("Window/Theme", False)
-        if vTemp1 is False:
+        if not self.jSettings.value("Window/Theme", ""):
             self.jSettings.setValue("Window/Theme", "auto")
 
-        vTemp1 = self.jSettings.value("Project/Folder", False)
-        if vTemp1 is False:
+        if not self.jSettings.value("Project/Folder", ""):
             self.jSettings.setValue("Project/Folder", "")
 
-        vTemp1 = self.jSettings.value("Window/Splash", False)
-        if vTemp1 is False:
+        if not self.jSettings.value("Window/Splash", ""):
             self.jSettings.setValue("Window/Splash", "True")
         
         # v3JS.beginGroup("Applications")
