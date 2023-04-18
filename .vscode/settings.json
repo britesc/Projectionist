@@ -3,5 +3,9 @@
     "qtForPython.rcc.options": [
         "-o",
         "${resourceDirname}${pathSeparator}${resourceBasenameNoExtension}_rc.py"
+    ],
+    "cSpell.ignoreWords": [
+        "folderpath",
+        "qttheme"
     ]
 }

@@ -1,13 +1,21 @@
 #!/usr/bin/env python3
 # coding: utf-8
-from PyQt6.QtCore import QSettings, QCoreApplication
 
+from pathlib import Path
+
+from PyQt6.QtCore import (
+    QSettings,
+    QCoreApplication,
+    QDate,
+    QDateTime,
+    QLocale,
+    Qt,
+    QSize    
+)    
 
 class J2_Settings:
     """ A Class for Settings """
-
-    def __init__(self) -> None:
-    # def __init__(self, OrgName=None, AppName=None) -> None:        
+    def __init__(self) -> None:    
         super().__init__()
         self.OrgName = QCoreApplication.organizationName()
         self.AppName = QCoreApplication.applicationName()
@@ -68,3 +76,18 @@ class J2_Settings:
         # if vTemp1 is False:
         #     vTemp1 = ""
         return self.jSettings.value(Context, Default, str)
+    
+    def getProjectFolder(self) -> str:
+        temp = Path(self.jSettings.value("Project/Folder", "", str))
+        return self.jSettings.value("Project/Folder", "", str) if temp.is_dir() else ""
+    
+    def getHeaderQuantity(self) -> int:
+        return self.jSettings.value("Header/Quantity", 0, int)
+    
+    def getHeaderDate(self) -> str:
+        temp1 = self.jSettings.value("Header/Date", 0, int)
+        return QDate.fromJulianDay(temp1).toString()
+
+    def getHeaderVersion(self) -> str:
+        return self.jSettings.value("Header/Version", "", str)
+    

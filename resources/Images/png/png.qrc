@@ -1,0 +1,41 @@
+<RCC>
+    <qresource prefix="/">
+        <file>About.png</file>
+        <file>Android.png</file>
+        <file>Arduino.png</file>
+        <file>Bash.png</file>
+        <file>C.png</file>
+        <file>C++.png</file>
+        <file>Cmake.png</file>
+        <file>copy.png</file>
+        <file>CSS.png</file>
+        <file>Doxygen.png</file>
+        <file>exit.png</file>
+        <file>git.png</file>
+        <file>github.png</file>
+        <file>grafviz.png</file>
+        <file>help.png</file>
+        <file>html.png</file>
+        <file>images.png</file>
+        <file>iOS.png</file>
+        <file>java.png</file>
+        <file>kotlin.png</file>
+        <file>list.png</file>
+        <file>load.png</file>
+        <file>mysql.png</file>
+        <file>paste.png</file>
+        <file>php.png</file>
+        <file>postgres.png</file>
+        <file>projectionist.png</file>
+        <file>Pythom.png</file>
+        <file>qt.png</file>
+        <file>QtAbout.png</file>
+        <file>reset.png</file>
+        <file>splash.png</file>
+        <file>sqllite.png</file>
+        <file>undo.png</file>
+        <file>vscode.png</file>
+        <file>write.png</file>
+        <file>www.png</file>
+    </qresource>
+</RCC>

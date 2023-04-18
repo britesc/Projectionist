@@ -23,7 +23,23 @@ class Tab2(QWidget, Ui_Tab2Setup):
         super().__init__()
         self.setupUi(self)
         self.AppWizard = AppWizard()    
-        self.J2_Settings = J2_Settings("J2Casa", "Projectionist")
+        self.J2_Settings = J2_Settings()
+        self.ProjectFolder = self.J2_Settings.getSetting("Project/Folder", "")
+        self.HeaderDate = self.J2_Settings.getHeaderDate()
+        self.YamlVersion = self.J2_Settings.getHeaderVersion()
+        self.AppQuantity = self.J2_Settings.getHeaderQuantity()
+        self.AppQuantityString = str(self.AppQuantity)
+        self.FolderPath = self.J2_Settings.getProjectFolder()
+        
+                
+        # Populate Home Folder Path                    
+        self.lineEditDisplayProjectFolder.setText(self.ProjectFolder)
+        
+        # Populate Applications Wizard
+        # Last Run
+        self.labelTextLastRunWhen.setText(self.HeaderDate)
+        self.labelTextVersionYAML.setText(self.YamlVersion)
+        self.labelTextInstalledQuantity.setText(self.AppQuantityString)
 
         # Signals and Slots
         
@@ -31,28 +47,12 @@ class Tab2(QWidget, Ui_Tab2Setup):
         self.pushButtonWizardProjectFolder.setDefault(False)
         self.pushButtonWizardApplications.clicked.connect(self.loadTheAppWizard)
         self.pushButtonWizardApplications.setDefault(False)
-        
-        # Populate Home Folder Path            
-        folderpath = self.J2_Settings.getSetting("Project/Folder", "")
-        self.lineEditDisplayProjectFolder.setText(folderpath)
-        
-        # Populate Applications Wizard
-        # Last Run
-        textwhen = self.J2_Settings.getSetting("Applications/Date", "Never")
-        self.labelTextLastRunWhen.setText(textwhen)
-        yamlversion = self.J2_Settings.getSetting("Applications/Version", "0.0.0")
-        self.labelTextVersionYAML.setText(yamlversion)
-        appquantity = self.J2_Settings.getSetting("Applications/Quantity", "None")
-        self.labelTextInstallledQuantity.setText(appquantity)
-
-
 
         
     def loadTheFileDialog(self) -> None:
         folderpath = QFileDialog.getExistingDirectory(self, 'Select Folder')
-        self.lineEditDisplayProjectFolder.setText(folderpath)
-#        self.J2_Settings.setSetting(self, "Project/Folder", folderpath)
         self.J2_Settings.setSetting("Project/Folder", folderpath)
-        
+        self.lineEditDisplayProjectFolder.setText(self.ProjectFolder)       
+                
     def loadTheAppWizard(self) -> None:
         self.AppWizard.exec()

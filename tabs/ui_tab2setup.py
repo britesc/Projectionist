@@ -162,10 +162,10 @@ class Ui_Tab2Setup(object):
 
         self.horizontalLayout.addWidget(self.labelTextInstalled)
 
-        self.labelTextInstallledQuantity = QLabel(self.groupBoxLocateApps)
-        self.labelTextInstallledQuantity.setObjectName(u"labelTextInstallledQuantity")
+        self.labelTextInstalledQuantity = QLabel(self.groupBoxLocateApps)
+        self.labelTextInstalledQuantity.setObjectName(u"labelTextInstallledQuantity")
 
-        self.horizontalLayout.addWidget(self.labelTextInstallledQuantity)
+        self.horizontalLayout.addWidget(self.labelTextInstalledQuantity)
 
         self.horizontalSpacerConfigureWizard = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
@@ -246,7 +246,7 @@ class Ui_Tab2Setup(object):
         self.labelTextVersion.setText(QCoreApplication.translate("Tab2Setup", u"Version:", None))
         self.labelTextVersionYAML.setText(QCoreApplication.translate("Tab2Setup", u"0.0.0", None))
         self.labelTextInstalled.setText(QCoreApplication.translate("Tab2Setup", u"Installed:", None))
-        self.labelTextInstallledQuantity.setText(QCoreApplication.translate("Tab2Setup", u"None", None))
+        self.labelTextInstalledQuantity.setText(QCoreApplication.translate("Tab2Setup", u"None", None))
         self.pushButtonWizardApplications.setText("")
     # retranslateUi
 

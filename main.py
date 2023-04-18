@@ -27,20 +27,25 @@ def SetupApp() -> None:
     QCoreApplication.setApplicationVersion("1.7.5")
 
 
+
 def main() -> None:
     vApplicationName = os.path.splitext(os.path.basename(__file__))[0]
+
     
     try:
-        # First we instatiate the App
+        # First we instantiate the App
         
         app = QApplication(sys.argv)
-        # Them we instatiate the settings        
+
+        # Them we instantiate the settings        
         
         PJ_Settings = j2_settings.J2_Settings()
         PJ_Settings.setDefaults()
-        # Then we read the settigs to see if we need the Splash Screen
+        # Then we read the settings to see if we need the Splash Screen
+        
+        
         PJ_ShowSplash = PJ_Settings.getSetting("Window/Splash", "")
-        # We instatiate the Spalsh Screen
+        # We instantiate the Splash Screen
         PJ_Splash   = j2_splash.J2_Splash(app)
         
         # If setting says anything other than False we show the splash screen

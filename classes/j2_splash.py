@@ -13,6 +13,7 @@ class J2_Splash:
         """ The __init__ Function """
         super().__init__()
         self.app = app
+        self.ClassVersion = "1.2.3"
         pixmap = QPixmap(u"resources/Images/png/splash.png")
         self.splash = QSplashScreen(pixmap)
         self.vJ2U = J2_Utilities()
@@ -25,12 +26,11 @@ class J2_Splash:
         """ The __repr__ Function """
         return "J2_Utilities"
 
-    def getVersion(self) -> str:
+    def getClassVersion(self) -> str:
         """ The Version String of this Class """
-        self.Version = "1.5.0"
-        return self.Version
+        return self.ClassVersion
 
-    def show(self, duration) -> None:
+    def show(self, duration: int)  -> None:
         """ Show the Splash Screen """
         self.duration = duration
         self.splash.show()
@@ -45,4 +45,4 @@ class J2_Splash:
         """ Hide the Splash Screen """
         self.app.processEvents()
         self.window = window
-        self.splash.finish(window)
+        self.splash.finish(self.window)
